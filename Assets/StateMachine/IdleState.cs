@@ -27,7 +27,7 @@ public class IdleState : IPlayerBaseState
            getPScript().onSwicht(getPScript().stateList.getWalkState());
              
         }  
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             getPScript().onSwicht(getPScript().stateList.getAimState());
         }
