@@ -29,10 +29,14 @@ public class WalkState : IPlayerBaseState
         {
             getPScript().onSwicht(getPScript().stateList.getRunningState());
         }
-        }  
-        
+        }   
+      
      else {
             getPScript().onSwicht(getPScript().stateList.getIdleState());
+        }
+     if (Input.GetKey(KeyCode.Mouse1))
+        {
+            getPScript().onSwicht(getPScript().stateList.getAimState());
         }
     }
 
