@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e0fc2d4a1adf947a8fa5f438d3db21, type: 3}
+  m_Name: HP
+  m_EditorClassIdentifier: 
+  RecoilAxis: {x: -6, y: 5, z: 5}
+  ammocount: 7
+  firerate: 2
+  RecoilAim: {x: 0, y: 0, z: 0}
+  auxAxis: {x: -6, y: 5, z: 5}

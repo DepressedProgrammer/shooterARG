@@ -14,6 +14,7 @@ public class IdleState : IPlayerBaseState
     public override void onEnter(GameObject player)
     {
           this.player = player;
+         
     }
 
     public override void onUpdate(GameObject player)

@@ -9,22 +9,24 @@ public class PlayerScript : Subject
     public IPlayerBaseState currenstate;
     public StateInitializer stateList;
     public Vector3 ultimaDir;
+    public IGun gunReference;
     void Start()
     {   
         stateList = new StateInitializer();
         currenstate = stateList.getIdleState();
         currenstate.onEnter(gameObject);
+     
     }
 
 
 void Update()
     {   
         currenstate.onUpdate(gameObject);
-        cam= gameObject.transform.GetChild(0).gameObject.transform;
-    
+       
+        Debug.DrawRay(cam.transform.position, cam.forward*30, Color.red);
+
     }
 
-   
     public void onSwicht(IPlayerBaseState state){
         currenstate=state;
         currenstate.onEnter(gameObject);
@@ -33,10 +35,10 @@ void Update()
 public void Mover(Vector3 direccion)
     {  
          
-        ultimaDir=direccion;
-        Vector3 camf = cam.forward; camf.y=0; camf= camf.normalized;
-        Vector3 camr =cam.right;camr.y=0; camr= camr.normalized;
-        GetComponent<Rigidbody>().MovePosition(transform.position+=(camf*direccion.y+ camr*direccion.x)*speed*Time.deltaTime);
+    ultimaDir=direccion;
+    Vector3 camf = cam.forward; camf.y=0; camf= camf.normalized;
+    Vector3 camr =cam.right;camr.y=0; camr= camr.normalized;
+    GetComponent<Rigidbody>().MovePosition(transform.position+=(camf*direccion.y+ camr*direccion.x)*speed*Time.deltaTime);
         // transform.position+=(camf*direccion.y+ camr*direccion.x)*speed*Time.deltaTime;
     }
 

@@ -12,8 +12,8 @@ public class AimState : IPlayerBaseState
     public override void onEnter(GameObject player)
     {
       this.player=player;
-
        getPScript().speed=3;
+       getPScript().gunReference.onSwicht(getPScript().gunReference.stateList.getAimState());
     }
 
     public override void onUpdate(GameObject player)
